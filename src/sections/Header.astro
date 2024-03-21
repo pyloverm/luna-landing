@@ -44,7 +44,9 @@ const { data } = Astro.props;
       <Action as="a" class="text-xl" href="#">{data.logo}</Action>
     </div>
 
-    <button id="burgerMenu" class=""> <BurgerMenuIcon /> </button>
+    <button id="burgerMenu" class="" aria-label="Open Menu">
+      <BurgerMenuIcon />
+    </button>
   </nav>
 </header>
 
