@@ -10,7 +10,7 @@ export interface LandingPageData {
 }
 
 export interface HeaderData {
-  logo: string;
+  logo: Link;
   links: Link[];
 }
 
@@ -85,6 +85,7 @@ export interface Tier {
   description: string;
   price: Price;
   features: string[];
+  featuresMissing: string[];
   cta: string;
 }
 
@@ -131,4 +132,10 @@ export type Icon =
   | "SolidIcon"
   | "VueIcon"
   | "VercelIcon"
-  | "NetlifyIcon";
+  | "NetlifyIcon"
+  | "EmailIcon"
+  | "NextjsIcon"
+  | "StripeIcon"
+  | "TypescriptIcon"
+  | "PostgresqlIcon"
+  | "MissingIcon";

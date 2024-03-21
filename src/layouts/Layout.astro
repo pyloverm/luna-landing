@@ -2,7 +2,7 @@
 import Background from "@/components/Background.astro";
 import type { Meta } from "@/config/landing.interface";
 import "@fontsource-variable/rubik";
-
+import { getLangFromUrl } from "../i18n/utils";
 interface Props {
   meta: Meta;
 }
@@ -10,12 +10,14 @@ interface Props {
 const { meta } = Astro.props;
 
 const ldJson = JSON.stringify(meta.ldJson);
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
 <html
   class="scrollbar-thin scrollbar-thumb-black scrollbar-track-transparent scroll-smooth"
-  lang={meta.lang ?? "en"}
+  lang={lang}
 >
   <head>
     <meta charset={meta.charset ?? "UTF-8"} />
@@ -29,20 +31,18 @@ const ldJson = JSON.stringify(meta.ldJson);
   <body class="bg-white">
     <Background />
     <slot />
-  </body>
+  </body><style is:global>
+    body {
+      font-family:
+        "Rubik Variable",
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
 </html>
-
-<style is:global>
-  body {
-    font-family:
-      "Rubik Variable",
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>

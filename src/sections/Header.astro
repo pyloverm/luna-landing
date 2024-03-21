@@ -1,7 +1,7 @@
 ---
 import Action from "@/components/Action.astro";
 import type { HeaderData } from "@/config/landing.interface";
-
+import BurgerMenuIcon from "@/icons/commons/BurgerMenuIcon.astro";
 interface Props {
   data: HeaderData;
 }
@@ -11,11 +11,16 @@ const { data } = Astro.props;
 
 <header
   id="navbar"
-  class="w-full transition duration-300 justify-center fixed h-20 z-50 hidden md:flex"
+  class="w-full transition duration-300 justify-center fixed h-20 z-50 flex"
 >
-  <nav aria-label="Main Navigation" class="flex flex-row items-center w-3/4">
+  <nav
+    aria-label="Main Navigation"
+    class="hidden lg:flex lg:flex-row items-center w-3/4"
+  >
     <div class="text-nowrap">
-      <Action as="a" class="text-xl" href="#">{data.logo}</Action>
+      <Action as="a" class="text-xl" href={data.logo.href}
+        >{data.logo.label}</Action
+      >
     </div>
     <ul class="flex flex-row w-full justify-center gap-x-14">
       {
@@ -30,7 +35,35 @@ const { data } = Astro.props;
     </ul>
     <span></span>
   </nav>
+
+  <nav
+    aria-label="Main Navigation"
+    class="hidden max-lg:flex max-lg:flex-row items-center justify-between container px-8"
+  >
+    <div class="text-nowrap">
+      <Action as="a" class="text-xl" href="#">{data.logo}</Action>
+    </div>
+
+    <button id="burgerMenu" class=""> <BurgerMenuIcon /> </button>
+  </nav>
 </header>
+
+<div
+  class="w-full flex backdrop-blur-xl bg-white/30 h-full z-20 flex-grow fixed top-20 justify-center lg:hidden transition duration-300 gap-4 hidden"
+  id="subNav"
+>
+  <ul class="flex flex-col gap-4 py-8">
+    {
+      data.links.map((item) => (
+        <li class="text-lg hover:scale-110 hover:opacity-80">
+          <Action as="a" href={item.href} id={item.href}>
+            {item.label}
+          </Action>
+        </li>
+      ))
+    }
+  </ul>
+</div>
 
 <script>
   window.addEventListener("scroll", function () {
@@ -51,4 +84,25 @@ const { data } = Astro.props;
       navbar.classList.add("bg-transparent");
     }
   });
+
+  document.getElementById("burgerMenu")?.addEventListener("click", function () {
+    console.log("clicked");
+    const subNav = document.getElementById("subNav");
+    if (!subNav) return;
+
+    if (subNav.classList.contains("hidden")) {
+      subNav.classList.remove("hidden");
+    } else {
+      subNav.classList.toggle("hidden");
+    }
+  });
+
+  for (const link of document.querySelectorAll("a")) {
+    link.addEventListener("click", function () {
+      const subNav = document.getElementById("subNav");
+      if (!subNav) return;
+
+      subNav.classList.add("hidden");
+    });
+  }
 </script>

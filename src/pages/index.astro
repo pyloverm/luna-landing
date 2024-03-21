@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import Adventajes from "@/sections/Adventajes.astro";
 import Brands from "@/sections/Brands.astro";
@@ -9,13 +10,15 @@ import Pricing from "@/sections/Pricing.astro";
 import Services from "@/sections/Services.astro";
 import { getLandingData } from "@/services/data.service";
 
-const data = await getLandingData();
+const lang = getLangFromUrl(Astro.url);
+const data = await getLandingData({ lang });
 ---
 
 <Layout meta={data.meta}>
+  <meta http-equiv="refresh" content="0;url=/en/" />
   <Header data={data.headerData} />
   <main class="flex flex-col justify-center items-center">
-    <div class="w-3/4">
+    <div class="container">
       <Hero data={data.heroData} />
       <Services data={data.servicesData} />
       <Adventajes data={data.adventajesData} />

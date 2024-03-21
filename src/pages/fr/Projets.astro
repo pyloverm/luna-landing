@@ -1,0 +1,44 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/sections/Footer.astro";
+import Header from "@/sections/Header.astro";
+
+import { getLangFromUrl } from "@/i18n/utils";
+import { getLandingData } from "@/services/data.service";
+
+const lang = getLangFromUrl(Astro.url);
+const data = await getLandingData({ lang });
+
+const projets = await Astro.glob("../../content/projets/*.md");
+---
+
+<Layout meta={data.meta}>
+  <Header data={data.headerData} />
+  <main class="flex flex-col justify-center items-center">
+    <div class="container w-full mr-auto ml-auto pr-8 pl-8">
+      <section id="hero-section" class="flex justify-center mt-48">
+        <div class="md:w-2/3">
+          <h1 class="text-4xl text-center font-semibold md:text-6xl">
+            Nos
+            <span class="text-primary">Projets </span>
+          </h1>
+
+          <ul class="mb-20">
+            {
+              projets.map((projet) => (
+                <li>
+                  <img src={projet.frontmatter.image} alt="" />
+                  <a href={projet.frontmatter.url}>
+                    {projet.frontmatter.title}
+                  </a>
+                  <p class="mt-8">{projet.rawContent}</p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+    </div>
+    <Footer data={data.footerData} />
+  </main>
+</Layout>

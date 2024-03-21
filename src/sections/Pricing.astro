@@ -12,7 +12,7 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<section class="mt-48">
+<section class="mt-48" id="prices">
   <SectionTitle>
     {data.title}
   </SectionTitle>
@@ -42,6 +42,14 @@ const { data } = Astro.props;
                 <li class="flex flex-row px-7 gap-x-1">
                   <span>
                     <Icon class="w-6 h-auto text-primary" icon="CheckIcon" />
+                  </span>
+                  <p class="text-center">{feature}</p>
+                </li>
+              ))}
+              {tier.featuresMissing?.map((feature) => (
+                <li class="flex flex-row px-7 gap-x-1">
+                  <span>
+                    <Icon class="w-6 h-auto text-red-500" icon="MissingIcon" />
                   </span>
                   <p class="text-center">{feature}</p>
                 </li>

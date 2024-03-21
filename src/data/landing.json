@@ -1,19 +1,19 @@
 {
   "meta": {
-    "title": "Luna Landing your perfect landing page",
-    "description": "Landing page template",
-    "lang": "en",
+    "title": "Hephaistos Informatica - Home",
+    "description": "Hephaistos web development company. We build websites and web applications for businesses and individuals.",
+    "lang": "pt-PT | en-US | fr-Fr",
     "charset": "UTF-8",
     "ldJson": {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "name": "Luna Landing",
-      "description": "Fictitious company that seeks to elevate and simplify the lives of web developers.",
+      "name": "Hephaistos Informatica",
+      "description": "Hephaistos web development company. We build websites and web applications for businesses and individuals.",
       "url": "https://luna-landing-rust.vercel.app/",
       "logo": "./public/favicon.svg",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "luna-landing@luna.com",
+        "email": "vctferreira.pro@gmail.com",
         "contactType": "Client Service"
       },
       "sameAs": [
@@ -24,7 +24,7 @@
     }
   },
   "headerData": {
-    "logo": "Luna Landing",
+    "logo": "Heaphaistos Informatica",
     "links": [
       { "label": "About", "href": "#" },
       { "label": "Services", "href": "#" },
@@ -44,9 +44,9 @@
     "title": "Everything you need to build a website",
     "services": [
       {
-        "title": "Professional Templates",
+        "title": "Professional customization",
         "icon": "DevIcon",
-        "description": "Our templates are crafted by experienced web designers, ensuring a modern and polished look for your site. From typography to element design, every detail is carefully considered to convey a professional image."
+        "description": "You can request a professional customization service to have your website tailored to your needs. Our team of experts will work with you to create a unique and personalized website that reflects your vision and brand identity."
       },
       {
         "title": "Integrated Accessibility",
@@ -66,7 +66,7 @@
     ]
   },
   "adventajesData": {
-    "title": "    Unlock the Power of Luna Landing: Discover the Key Benefits",
+    "title": "    Unlock the Power of Modern Web site : Discover the Key Benefits",
     "adventajes": [
       {
         "title": "Take Your Website to Perfection",
@@ -119,46 +119,50 @@
         "title": "Starter",
         "description": "Best option for personal use & for your next project.",
         "price": {
-          "amount": "Free"
+          "amount": "$800",
+          "period": "/site"
         },
         "features": [
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5"
+          "5 - 10 Pages",
+          "SEO Optimized",
+          "Customization",
+          "24/7 Support*",
+          "Free Hosting for ever*"
         ],
         "cta": "Get started"
       },
       {
         "title": "Professional",
-        "description": "Relevant for multiple users, extended & premium support.",
+        "description": "Best for small businesses that need more features.",
         "price": {
-          "amount": "$29",
-          "period": "/month"
+          "amount": "$1200",
+          "period": "/site"
         },
         "features": [
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5"
+          "5 - 10 Pages",
+          "SEO Optimized",
+          "Customization",
+          "24/7 Support*",
+          "Free Hosting for ever*",
+          "Custom widgets*"
         ],
         "cta": "Get started"
       },
       {
-        "title": "Enterprise",
-        "description": "Best for large scale uses and extended redistribution rights.",
+        "title": "E-commerce",
+        "description": "Best for businesses that need to sell something over the web.",
         "price": {
-          "amount": "$59",
-          "period": "/month"
+          "amount": "$1500+",
+          "period": "/site"
         },
         "features": [
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5"
+          "5 - 10 Pages",
+          "SEO Optimized",
+          "Customization",
+          "24/7 Support*",
+          "Free Hosting for ever*",
+          "Custom widgets*",
+          "Online Store"
         ],
         "cta": "Get started"
       }
