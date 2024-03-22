@@ -1,0 +1,76 @@
+---
+import { getLangFromUrl } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/sections/Footer.astro";
+import Header from "@/sections/Header.astro";
+import { getLandingData } from "@/services/data.service";
+const lang = getLangFromUrl(Astro.url);
+const data = await getLandingData({ lang });
+---
+
+<Layout meta={data.meta}>
+  <Header data={data.headerData} />
+  <main class="flex flex-col justify-center items-center">
+    <div
+      class="flex flex-col items-center justify-center px-6 py-8 mx-auto my-20 mt-32 lg:py-0 w-full"
+    >
+      <div
+        class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-lg xl:p-0 dark:bg-gray-800 dark:border-gray-700"
+      >
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <img
+            src="/moi.png"
+            alt="Victor Ferreira"
+            class="mx-auto w-40 h-40 rounded-full bg-primary"
+          />
+          <h1
+            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+          >
+            Victor Ferreira
+          </h1>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            Web Developer | Passionate about New Technologies
+          </p>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            Hello, I'm Victor Ferreira, a passionate and dedicated web developer
+            with a keen interest in exploring and harnessing the power of new
+            technologies. I am also the creator of Héphaïstos Informatica.
+          </p>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            With a strong foundation in web development, I am committed to
+            creating innovative and user-friendly digital solutions that meet
+            the unique needs of each project. I have expertise in a variety of
+            programming languages and tools, allowing me to adapt to new
+            challenges and deliver high-quality results.
+          </p>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            My passion for new technologies drives me to stay informed about the
+            latest trends and advancements in the industry. I firmly believe
+            that continuous learning is the key to staying competitive and
+            relevant in the ever-evolving technology landscape.
+          </p>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            When I'm not coding or learning new technologies, you can find me
+            engaging in various activities that stimulate my creativity and
+            problem-solving skills. I am a strong advocate for work-life balance
+            to ensure optimal performance in all aspects of life.
+          </p>
+          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            Thank you for taking the time to learn more about me. I look forward
+            to meeting you and exploring potential collaboration opportunities.
+            Let's create something extraordinary together!
+          </p>
+          <div class="flex items-center justify-between">
+            <a
+              href="mailto:vctferreira.pro@gmail.com"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Send me an email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer data={data.footerData} />
+</Layout>

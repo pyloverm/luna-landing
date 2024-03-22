@@ -1,16 +1,11 @@
 ---
+import { getLangFromUrl } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import Footer from "@/sections/Footer.astro";
 import Header from "@/sections/Header.astro";
-
-import SideBySideProject from "@/components/SideBySideProject.astro";
-import { getLangFromUrl } from "@/i18n/utils";
 import { getLandingData } from "@/services/data.service";
-
 const lang = getLangFromUrl(Astro.url);
 const data = await getLandingData({ lang });
-
-const projets = await Astro.glob("../../content/projets/*.md");
 ---
 
 <Layout meta={data.meta}>
@@ -18,33 +13,25 @@ const projets = await Astro.glob("../../content/projets/*.md");
   <main class="flex flex-col justify-center items-center">
     <div class="container w-full mr-auto ml-auto pr-8 pl-8">
       <section id="hero-section" class="flex justify-center mt-48">
-        <div class="">
+        <div class="md:w-2/3">
           <h1 class="text-4xl text-center font-semibold md:text-6xl">
-            Nos
-            <span class="text-primary">Projets </span>
+            Explique-nos as suas necessidades
+            <span class="text-primary"
+              >iremos oferecer soluções para você
+            </span>
           </h1>
-
-          <ul class="my-20">
-            {
-              projets.map((projet, index) => (
-                <SideBySideProject
-                  data={projet}
-                  reversed={index % 2 == 0}
-                  lang="fr"
-                />
-              ))
-            }
-          </ul>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd40bzwDTfDgsvbP5g55tYXs778MfNoCikdMfGmNDiKfBEROg/viewform?embedded=true&hl=pt"
+            class="w-full mt-8 h-[2000px]"
+            height="2000px"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            scrolling="no">Chargement…</iframe
+          >
         </div>
       </section>
     </div>
     <Footer data={data.footerData} />
   </main>
 </Layout>
-
-<style>
-  .a {
-    color: #000;
-    underline: #000 2px;
-  }
-</style>

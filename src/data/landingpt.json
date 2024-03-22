@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "Hephaistos Informatica - Início",
+    "description": "Empresa de desenvolvimento web Hephaistos. Criamos sites e aplicativos web para empresas e indivíduos.",
+    "lang": "pt-PT",
+    "charset": "UTF-8",
+    "ldJson": {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Hephaistos Informatica",
+      "description": "Empresa de desenvolvimento web Hephaistos. Criamos sites e aplicativos web para empresas e indivíduos.",
+      "url": "https://seu-site.com/",
+      "logo": "./public/favicon.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "seu-email@hephaistos.com",
+        "contactType": "Atendimento ao cliente"
+      },
+      "sameAs": [
+        "https://www.twitter.com/suapagina",
+        "https://www.instagram.com/suapagina",
+        "https://www.linkedin.com/company/suapagina"
+      ]
+    }
+  },
+  "headerData": {
+    "logo": { "label": "Hephaistos Informatica", "href": "/pt" },
+    "links": [
+      { "label": "Sobre", "href": "/pt/Sobre" },
+      { "label": "Serviços", "href": "/pt/#prices" },
+      { "label": "Preços", "href": "/pt/#prices" },
+      { "label": "Nossos Projetos", "href": "/pt/Projetos" }
+    ]
+  },
+  "heroData": {
+    "title": "Melhore sua presença na web: Bem-vindo à",
+    "subTitle": "Crie um site que se destaque e alcance novos patamares online conosco.",
+    "primaryCta": { "label": "Veja nossos serviços", "href": "#servicos" },
+    "secondaryCta": { "label": "Veja nossos projetos", "href": "/pt/Projetos" },
+    "highlightedTitle": "Hephaistos Informatica"
+  },
+  "servicesData": {
+    "title": "Tudo o que você precisa para criar um site",
+    "services": [
+      {
+        "title": "Customização profissional",
+        "icon": "DevIcon",
+        "description": "Você pode solicitar um serviço de customização profissional para ter seu site adaptado às suas necessidades. Nossa equipe de especialistas trabalhará com você para criar um site único e personalizado que reflete sua visão e identidade de marca."
+      },
+      {
+        "title": "Acessibilidade integrada",
+        "icon": "PlanetIcon",
+        "description": "Nós nos preocupamos com a acessibilidade da web e integramos recursos para garantir que seu site seja acessível a todos os usuários, incluindo aqueles com deficiências visuais ou motoras. Nossos modelos estão em conformidade com os padrões de acessibilidade WCAG para oferecer uma experiência inclusiva para todos."
+      },
+      {
+        "title": "Otimizado para SEO",
+        "icon": "FileIcon",
+        "description": "Nós entendemos a importância da visibilidade do seu site nos mecanismos de pesquisa. Por isso, nossos modelos são otimizados para SEO, o que significa que eles são estruturados e codificados para serem facilmente indexados pelo Google e outros mecanismos de pesquisa, ajudando assim a melhorar seu ranking nos resultados de pesquisa."
+      },
+      {
+        "title": "Configuração fácil",
+        "icon": "ConfigIcon",
+        "description": "Com nossos modelos, você não precisa ser um especialista em desenvolvimento web para ter um site impressionante. Eles são fáceis de configurar e personalizar, com opções intuitivas que permitem alterar cores, fontes, layout da página e muito mais, com apenas alguns cliques. Faça seu site se destacar sem esforço!"
+      }
+    ]
+  },
+  "adventajesData": {
+    "title": "Desbloqueie o poder de um site moderno: Descubra as vantagens chave",
+    "adventajes": [
+      {
+        "title": "Personalize seu site à perfeição",
+        "description": "Nossas opções de personalização intuitivas permitem que você crie um site que se destaca e ressoa com seu público como nunca antes. Diga adeus aos designs pré-fabricados e olá para um site que realmente reflete sua visão e personalidade.",
+        "img": "template.webp",
+        "imageAlt": "Esta é uma imagem sobre as vantagens do serviço de modelo",
+        "checks": ["Cores", "Fontes", "Layout"]
+      },
+      {
+        "title": "Sites de alto desempenho com tecnologias de ponta",
+        "description": "Nós usamos as tecnologias mais performáticas para criar sites rápidos e suaves. Graças ao uso de frameworks e ferramentas de ponta, nós garantimos uma navegação rápida e uma experiência do usuário sem atrito. Nossos sites são otimizados para oferecer tempos de carregamento rápidos, reatividade móvel e compatibilidade com vários navegadores, garantindo assim uma experiência do usuário excepcional para todos os visitantes.",
+        "img": "rocket.webp",
+        "imageAlt": "Esta é uma imagem sobre as vantagens das tecnologias de ponta",
+        "checks": [
+          "Navegação rápida",
+          "Redução de atrito",
+          "Experiência do usuário excepcional"
+        ]
+      },
+      {
+        "title": "Alcance o topo dos rankings de pesquisa",
+        "description": "Melhore sua visibilidade online com o nosso modelo otimizado para SEO. Projetado com base nos algoritmos dos mecanismos de pesquisa, nosso modelo é projetado para ajudar seu site a subir ao topo das páginas de resultados dos mecanismos de pesquisa (SERPs). Desde as tags meta otimizadas até a estrutura HTML limpa, reatividade móvel e tempos de carregamento rápidos, cada aspecto do nosso modelo é projetado para maximizar o desempenho do seu site nos mecanismos de pesquisa. Aumente o tráfego orgânico, atrai mais visitantes e cresça sua presença online com facilidade.",
+        "img": "seo.webp",
+        "imageAlt": "Esta é uma imagem sobre as vantagens do SEO",
+        "checks": [
+          "Visibilidade de pesquisa",
+          "Tráfego orgânico",
+          "Credibilidade online"
+        ]
+      }
+    ]
+  },
+  "brandsData": {
+    "title": "Integração com tecnologias de ponta",
+    "description": "Integre facilmente as tecnologias de ponta. Nossa plataforma suporta de forma transparente as ferramentas e os frameworks padrão da indústria, permitindo que você fique à frente e maximize sua produtividade. Explore possibilidades infinitas com nossos recursos de compatibilidade completos",
+    "brands": [
+      { "label": "React", "icon": "ReactIcon", "href": "https://react.dev/" },
+      {
+        "label": "Next.js",
+        "icon": "NextjsIcon",
+        "href": "https://nextjs.org/"
+      },
+      {
+        "label": "Typescript",
+        "icon": "TypescriptIcon",
+        "href": "https://www.typescriptlang.org/"
+      },
+      {
+        "label": "Vercel",
+        "icon": "VercelIcon",
+        "href": "https://vercel.com/"
+      },
+      {
+        "label": "PostgreSQL",
+        "icon": "PostgresqlIcon",
+        "href": "https://www.postgresql.org/"
+      },
+      {
+        "label": "Stripe",
+        "icon": "StripeIcon",
+        "href": "https://www.stripe.com/"
+      }
+    ]
+  },
+  "pricingData": {
+    "title": "Nossos Preços",
+    "path": "/pt/pedido",
+    "tiers": [
+      {
+        "title": "Iniciante",
+        "description": "Melhor opção para uso pessoal e para o seu próximo projeto.",
+        "price": {
+          "amount": "800 €",
+          "period": "/site"
+        },
+        "features": [
+          "5 - 10 Páginas",
+          "Otimizado para SEO",
+          "Personalização",
+          "Suporte 24/7*",
+          "Hospedagem grátis para sempre*"
+        ],
+        "featuresMissing": ["Widgets personalizados*", "Loja online"],
+        "cta": "Começar"
+      },
+      {
+        "title": "Profissional",
+        "description": "Ideal para pequenas empresas que precisam de mais recursos.",
+        "price": {
+          "amount": "1200 €",
+          "period": "/site"
+        },
+        "features": [
+          "5 - 10 Páginas",
+          "Otimizado para SEO",
+          "Personalização",
+          "Suporte 24/7*",
+          "Hospedagem grátis para sempre*",
+          "Widgets personalizados*"
+        ],
+        "featuresMissing": ["Loja online"],
+        "cta": "Começar"
+      },
+      {
+        "title": "E-commerce",
+        "description": "Ideal para empresas que precisam vender algo na web.",
+        "price": {
+          "amount": "1500 €+",
+          "period": "/site"
+        },
+        "features": [
+          "5 - 10 Páginas",
+          "Otimizado para SEO",
+          "Personalização",
+          "Suporte 24/7*",
+          "Hospedagem grátis para sempre*",
+          "Widgets personalizados*",
+          "Loja online"
+        ],
+        "cta": "Começar"
+      }
+    ]
+  },
+  "footerData": {
+    "logo": { "label": "Hephaistos Informatica", "href": "/pt" },
+    "description": "Empresa de desenvolvimento web Hephaistos. Criamos sites e aplicativos web para empresas e indivíduos.",
+    "links": [
+      { "label": "Sobre", "href": "/pt/Sobre" },
+      { "label": "Serviços", "href": "/pt/#prices" },
+      { "label": "Preços", "href": "/pt/#prices" },
+      { "label": "Nossos Projetos", "href": "/pt/Projetos" }
+    ],
+    "socials": [
+      {
+        "icon": "InstagramIcon",
+        "href": "https://www.instagram.com/hephaistos.informatica/"
+      },
+      { "icon": "EmailIcon", "href": "mailto:vctferreira.pro@gmail.com" }
+    ]
+  },
+  "performances": {
+    "title": "Performance",
+    "subtitle": "Nós nos comprometemos a fornecer sites rápidos e de alto desempenho para uma experiência do usuário excepcional. Descubra como nossos sites se comparam aos padrões de performance da web.",
+    "lighthouse": {
+      "performance": "Performance",
+      "accessibility": "Acessibilidade",
+      "bestPractices": "Melhores Práticas",
+      "seo": "SEO"
+    }
+  }
+}

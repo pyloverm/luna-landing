@@ -1,7 +1,7 @@
 ---
 import Action from "./Action.astro";
 
-const { data, reversed } = Astro.props;
+const { data, reversed, lang } = Astro.props;
 ---
 
 <article
@@ -18,15 +18,44 @@ const { data, reversed } = Astro.props;
   </div>
   <div class="flex flex-col md:w-5/6 gap-y-8">
     <h3 class="text-xl md:text-4xl">{data.frontmatter.title}</h3>
-    <p class="md:text-xl">{data.frontmatter.subtitle}</p>
-    <data.Content />
+    <p class="md:text-xl">
+      {
+        lang === "en"
+          ? data.frontmatter.subtitleEn
+          : lang === "fr"
+            ? data.frontmatter.subtitle
+            : lang === "pt"
+              ? data.frontmatter.subtitlePt
+              : ""
+      }
+    </p>
+
+    <p>
+      {
+        lang === "en"
+          ? data.frontmatter.textEn
+          : lang === "fr"
+            ? data.frontmatter.text
+            : lang === "pt"
+              ? data.frontmatter.textPt
+              : ""
+      }
+    </p>
     <Action
       as="a"
       type="button"
       class="bg-black text-white"
       href={data.frontmatter.url}
     >
-      {data.frontmatter.action}
+      {
+        lang === "en"
+          ? data.frontmatter.actionEn
+          : lang === "fr"
+            ? data.frontmatter.action
+            : lang === "pt"
+              ? data.frontmatter.actionPt
+              : ""
+      }
     </Action>
   </div>
 </article>

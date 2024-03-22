@@ -1,107 +1,102 @@
 {
   "meta": {
-    "title": "Hephaistos Informatica - Accueil",
-    "description": "Société de développement web Hephaistos. Nous créons des sites web et des applications web pour les entreprises et les particuliers.",
-    "lang": "fr-FR",
+    "title": "Hephaistos Informatica - Home",
+    "description": "Hephaistos web development company. We create websites and web applications for businesses and individuals.",
+    "lang": "en-US",
     "charset": "UTF-8",
     "ldJson": {
       "@context": "http://schema.org",
       "@type": "Organization",
       "name": "Hephaistos Informatica",
-      "description": "Société de développement web Hephaistos. Nous créons des sites web et des applications web pour les entreprises et les particuliers.",
-      "url": "https://votre-site-web.com/",
+      "description": "Hephaistos web development company. We create websites and web applications for businesses and individuals.",
+      "url": "https://your-website.com/",
       "logo": "./public/favicon.svg",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "votre-email@hephaistos.com",
-        "contactType": "Service client"
+        "email": "your-email@hephaistos.com",
+        "contactType": "Customer service"
       },
       "sameAs": [
-        "https://www.twitter.com/votrepage",
-        "https://www.instagram.com/votrepage",
-        "https://www.linkedin.com/company/votrepage"
+        "https://www.twitter.com/yourpage",
+        "https://www.instagram.com/yourpage",
+        "https://www.linkedin.com/company/yourpage"
       ]
     }
   },
   "headerData": {
-    "logo": { "label": "Hephaistos Informatica", "href": "/fr" },
+    "logo": { "label": "Hephaistos Informatica", "href": "/en" },
     "links": [
-      { "label": "À propos", "href": "/fr/Apropos" },
-      { "label": "Services", "href": "#" },
-      { "label": "Tarifs", "href": "#prices" },
-      { "label": "FAQs", "href": "#" },
-      { "label": "Nos Projets", "href": "/fr/Projets" }
+      { "label": "About", "href": "/en/About" },
+      { "label": "Services", "href": "/en/#prices" },
+      { "label": "Pricing", "href": "/en/#prices" },
+      { "label": "Our Projects", "href": "/en/Projects" }
     ]
   },
   "heroData": {
-    "title": " Amelioré votre presance web : Bienvenue sur",
-    "subTitle": "Créez un site web qui se démarque et atteignez de nouveaux sommets en ligne avec nous.",
-    "primaryCta": "Voir nos services",
-    "secondaryCta": "Voir nos projets",
+    "title": "Improve your web presence: Welcome to",
+    "subTitle": "Create a website that stands out and reach new heights online with us.",
+    "primaryCta": { "label": "See our services", "href": "#services" },
+    "secondaryCta": { "label": "See our projects", "href": "/en/Projects" },
     "highlightedTitle": "Hephaistos Informatica"
   },
   "servicesData": {
-    "title": "Tout ce dont vous avez besoin pour créer un site web",
+    "title": "Everything you need to create a website",
     "services": [
       {
-        "title": "Personnalisation professionnelle",
+        "title": "Professional customization",
         "icon": "DevIcon",
-        "description": "Vous pouvez demander un service de personnalisation professionnelle pour avoir votre site web adapté à vos besoins. Notre équipe d'experts travaillera avec vous pour créer un site web unique et personnalisé qui reflète votre vision et votre identité de marque."
+        "description": "You can request a professional customization service to have your website adapted to your needs. Our team of experts will work with you to create a unique and customized website that reflects your vision and brand identity."
       },
       {
-        "title": "Accessibilité intégrée",
+        "title": "Built-in accessibility",
         "icon": "PlanetIcon",
-        "description": "Nous nous soucions de l'accessibilité du web et avons intégré des fonctionnalités pour garantir que votre site est accessible à tous les utilisateurs, y compris ceux souffrant de handicaps visuels ou moteurs. Nos modèles sont conformes aux normes d'accessibilité WCAG pour offrir une expérience inclusive à tous."
+        "description": "We care about web accessibility and have integrated features to ensure that your site is accessible to all users, including those with visual or motor disabilities. Our templates comply with WCAG accessibility standards to provide an inclusive experience for all."
       },
       {
-        "title": "Optimisé pour le SEO",
+        "title": "SEO optimized",
         "icon": "FileIcon",
-        "description": "Nous comprenons l'importance de la visibilité de votre site dans les moteurs de recherche. C'est pourquoi nos modèles sont optimisés pour le SEO, ce qui signifie qu'ils sont structurés et codés pour être facilement indexés par Google et autres moteurs de recherche, aidant ainsi à améliorer votre classement dans les résultats de recherche."
+        "description": "We understand the importance of your site's visibility in search engines. That's why our templates are SEO optimized, meaning they are structured and coded to be easily indexed by Google and other search engines, helping to improve your ranking in search results."
       },
       {
-        "title": "Configuration facile",
+        "title": "Easy setup",
         "icon": "ConfigIcon",
-        "description": "Avec nos modèles, vous n'avez pas besoin d'être un expert en développement web pour avoir un site impressionnant. Ils sont faciles à configurer et à personnaliser, avec des options intuitives qui vous permettent de changer les couleurs, les polices, la disposition des pages, et plus encore, en quelques clics. Faites en sorte que votre site se démarque sans effort !"
+        "description": "With our templates, you don't need to be a web development expert to have an impressive site. They are easy to set up and customize, with intuitive options that allow you to change colors, fonts, page layout, and more, with just a few clicks. Make your site stand out effortlessly!"
       }
     ]
   },
   "adventajesData": {
-    "title": "Débloquez le pouvoir d'un site web moderne : Découvrez les avantages clés",
+    "title": "Unlock the power of a modern website: Discover the key advantages",
     "adventajes": [
       {
-        "title": "Personnalisez votre site web à la perfection",
-        "description": "Nos options de personnalisation intuitives vous permettent de créer un site web qui se démarque et résonne avec votre audience comme jamais auparavant. Dites adieu aux designs préfabriqués et bonjour à un site web qui reflète véritablement votre vision et votre personnalité.",
+        "title": "Customize your website to perfection",
+        "description": "Our intuitive customization options allow you to create a website that stands out and resonates with your audience like never before. Say goodbye to prefabricated designs and hello to a website that truly reflects your vision and personality.",
         "img": "template.webp",
-        "imageAlt": "Ceci est une image sur les avantages du service de modèle",
-        "checks": ["Couleurs", "Polices", "Disposition"]
+        "imageAlt": "This is an image about the advantages of the template service",
+        "checks": ["Colors", "Fonts", "Layout"]
       },
       {
-        "title": "Des sites performants avec les dernières technologies",
-        "description": "Nous utilisons les technologies les plus performantes pour créer des sites web rapides et fluides. Grâce à l'utilisation de frameworks et d'outils de pointe, nous garantissons une navigation rapide et une expérience utilisateur sans friction. Nos sites sont optimisés pour offrir des temps de chargement rapides, une réactivité mobile et une compatibilité multi-navigateurs, assurant ainsi une expérience utilisateur exceptionnelle pour tous les visiteurs.",
+        "title": "High-performing websites with cutting-edge technologies",
+        "description": "We use the most performant technologies to create fast and smooth websites. Thanks to the use of cutting-edge frameworks and tools, we guarantee fast navigation and a frictionless user experience. Our websites are optimized to offer fast loading times, mobile responsiveness, and multi-browser compatibility, ensuring an exceptional user experience for all visitors.",
         "img": "rocket.webp",
-        "imageAlt": "Ceci est une image sur les avantages des technologies de pointe",
+        "imageAlt": "This is an image about the advantages of cutting-edge technologies",
         "checks": [
-          "Rapidité de navigation",
-          "Diminution de la friction",
-          "Expérience utilisateur exceptionnelle"
+          "Fast navigation",
+          "Reduced friction",
+          "Exceptional user experience"
         ]
       },
       {
-        "title": "Atteignez le haut des classements de recherche",
-        "description": "Améliorez votre visibilité en ligne avec notre modèle optimisé pour le SEO. Conçu en tenant compte des algorithmes des moteurs de recherche, notre modèle est conçu pour aider votre site web à grimper au sommet des pages de résultats des moteurs de recherche (SERPs). Des balises méta optimisées et une structure HTML propre à la réactivité mobile et aux temps de chargement rapides, chaque aspect de notre modèle est conçu pour maximiser la performance de votre site web sur les moteurs de recherche. Augmentez votre trafic organique, attirez plus de visiteurs et développez votre présence en ligne facilement.",
+        "title": "Reach the top of search rankings",
+        "description": "Improve your online visibility with our SEO-optimized template. Designed with search engine algorithms in mind, our template is designed to help your website climb to the top of search engine results pages (SERPs). From optimized meta tags to clean HTML structure, mobile responsiveness, and fast loading times, every aspect of our template is designed to maximize your website's performance on search engines. Increase your organic traffic, attract more visitors, and grow your online presence easily.",
         "img": "seo.webp",
-        "imageAlt": "Ceci est une image sur les avantages du SEO",
-        "checks": [
-          "Visibilité de recherche",
-          "Trafic organique",
-          "Crédibilité en ligne"
-        ]
+        "imageAlt": "This is an image about the advantages of SEO",
+        "checks": ["Search visibility", "Organic traffic", "Online credibility"]
       }
     ]
   },
   "brandsData": {
-    "title": "Intégration avec les technologies de pointe",
-    "description": "Intégrez facilement les technologies de pointe. Notre plateforme prend en charge de manière transparente les outils et les cadres standard de l'industrie, vous permettant de rester à la pointe et de maximiser votre productivité. Explorez des possibilités infinies avec nos fonctionnalités de compatibilité complètes",
+    "title": "Integration with cutting-edge technologies",
+    "description": "Easily integrate cutting-edge technologies. Our platform seamlessly supports industry-standard tools and frameworks, enabling you to stay ahead and maximize your productivity. Explore endless possibilities with our comprehensive compatibility features",
     "brands": [
       { "label": "React", "icon": "ReactIcon", "href": "https://react.dev/" },
       {
@@ -124,7 +119,6 @@
         "icon": "PostgresqlIcon",
         "href": "https://www.postgresql.org/"
       },
-
       {
         "label": "Stripe",
         "icon": "StripeIcon",
@@ -133,87 +127,88 @@
     ]
   },
   "pricingData": {
-    "title": "Nos Tarifs",
-    "path": "/fr/demande",
+    "title": "Our Pricing",
+    "path": "/en/request",
     "tiers": [
       {
-        "title": "Débutant",
-        "description": "Meilleure option pour un usage personnel et pour votre prochain projet.",
+        "title": "Beginner",
+        "description": "Best option for personal use and for your next project.",
         "price": {
           "amount": "800 €",
           "period": "/site"
         },
         "features": [
           "5 - 10 Pages",
-          "Optimisé pour le SEO",
-          "Personnalisation",
-          "Support 24/7*",
-          "Hébergement gratuit à vie*"
+          "SEO optimized",
+          "Customization",
+          "24/7 support*",
+          "Free lifetime hosting*"
         ],
-        "featuresMissing": ["Widgets personnalisés*", "Boutique en ligne"],
-        "cta": "Commencer"
+        "featuresMissing": ["Custom widgets*", "Online store"],
+        "cta": "Get started"
       },
       {
-        "title": "Professionnel",
-        "description": "Idéal pour les petites entreprises qui ont besoin de plus de fonctionnalités.",
+        "title": "Professional",
+        "description": "Ideal for small businesses that need more features.",
         "price": {
           "amount": "1200 €",
           "period": "/site"
         },
         "features": [
           "5 - 10 Pages",
-          "Optimisé pour le SEO",
-          "Personnalisation",
-          "Support 24/7*",
-          "Hébergement gratuit à vie*",
-          "Widgets personnalisés*"
+          "SEO optimized",
+          "Customization",
+          "24/7 support*",
+          "Free lifetime hosting*",
+          "Custom widgets*"
         ],
-        "featuresMissing": ["Boutique en ligne"],
-        "cta": "Commencer"
+        "featuresMissing": ["Online store"],
+        "cta": "Get started"
       },
       {
         "title": "E-commerce",
-        "description": "Idéal pour les entreprises qui ont besoin de vendre quelque chose sur le web.",
+        "description": "Ideal for businesses that need to sell something on the web.",
         "price": {
           "amount": "1500 €+",
           "period": "/site"
         },
         "features": [
           "5 - 10 Pages",
-          "Optimisé pour le SEO",
-          "Personnalisation",
-          "Support 24/7*",
-          "Hébergement gratuit à vie*",
-          "Widgets personnalisés*",
-          "Boutique en ligne"
+          "SEO optimized",
+          "Customization",
+          "24/7 support*",
+          "Free lifetime hosting*",
+          "Custom widgets*",
+          "Online store"
         ],
-        "cta": "Commencer"
+        "cta": "Get started"
       }
     ]
   },
   "footerData": {
-    "logo": { "label": "Hephaistos Informatica", "href": "/fr" },
-    "description": "Société de développement web Hephaistos. Nous créons des sites web et des applications web pour les entreprises et les particuliers.",
+    "logo": { "label": "Hephaistos Informatica", "href": "/en" },
+    "description": "Hephaistos web development company. We create websites and web applications for businesses and individuals.",
     "links": [
-      { "label": "À propos", "href": "/" },
-      { "label": "Services", "href": "/" },
-      { "label": "Blog", "href": "/" },
-      { "label": "FAQs", "href": "/" },
-      { "label": "Contact", "href": "/" }
+      { "label": "About", "href": "/en/About" },
+      { "label": "Services", "href": "/en/#prices" },
+      { "label": "Pricing", "href": "/en/#prices" },
+      { "label": "Our Projects", "href": "/en/Projects" }
     ],
     "socials": [
-      { "icon": "InstagramIcon", "href": "/" },
-      { "icon": "GithubIcon", "href": "/" },
-      { "icon": "EmailIcon", "href": "/" }
+      {
+        "icon": "InstagramIcon",
+        "href": "https://www.instagram.com/hephaistos.informatica/"
+      },
+      { "icon": "EmailIcon", "href": "mailto:vctferreira.pro@gmail.com" }
     ]
   },
   "performances": {
-    "title": "Performances",
-    "subtitle": "Nous nous engageons à fournir des sites web rapides et performants pour offrir une expérience utilisateur exceptionnelle. Découvrez comment nos sites se comparent aux normes de performance web.",
+    "title": "Performance",
+    "subtitle": "We are committed to providing fast and high-performing websites for an exceptional user experience. Discover how our websites compare to web performance standards.",
     "lighthouse": {
-      "performance": "Performances",
-      "accessibility": "Accessibilité",
-      "bestPractices": "Bonnes Pratiques",
+      "performance": "Performance",
+      "accessibility": "Accessibility",
+      "bestPractices": "Best Practices",
       "seo": "SEO"
     }
   }

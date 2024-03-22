@@ -1,6 +1,7 @@
 export const languages = {
   en: "English",
   fr: "Français",
+  pt: "Português",
 };
 
 export const defaultLang = "en";
@@ -15,5 +16,10 @@ export const ui = {
     "nav.home": "Accueil",
     "nav.about": "À propos",
     "nav.advantages": "Avantages",
+  },
+  pt: {
+    "nav.home": "Página inicial",
+    "nav.about": "Sobre",
+    "nav.advantages": "Vantagens",
   },
 } as const;

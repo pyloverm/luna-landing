@@ -20,8 +20,8 @@ const projets = await Astro.glob("../../content/projets/*.md");
       <section id="hero-section" class="flex justify-center mt-48">
         <div class="">
           <h1 class="text-4xl text-center font-semibold md:text-6xl">
-            Nos
-            <span class="text-primary">Projets </span>
+            Nossos
+            <span class="text-primary">Projetos </span>
           </h1>
 
           <ul class="my-20">
@@ -30,7 +30,7 @@ const projets = await Astro.glob("../../content/projets/*.md");
                 <SideBySideProject
                   data={projet}
                   reversed={index % 2 == 0}
-                  lang="fr"
+                  lang="pt"
                 />
               ))
             }

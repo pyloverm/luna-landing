@@ -5,6 +5,8 @@ import BurgerMenuIcon from "@/icons/commons/BurgerMenuIcon.astro";
 interface Props {
   data: HeaderData;
 }
+import LanguagePicker from "@/components/LanguagePicker.astro";
+import LanguagePickerMini from "@/components/LanguagePickerMini.astro";
 
 const { data } = Astro.props;
 ---
@@ -33,6 +35,7 @@ const { data } = Astro.props;
         ))
       }
     </ul>
+    <LanguagePicker lang={"lang"} />
     <span></span>
   </nav>
 
@@ -45,6 +48,7 @@ const { data } = Astro.props;
         >{data.logo.label}</Action
       >
     </div>
+    <LanguagePickerMini lang={"lang"} />
 
     <button id="burgerMenu" class="" aria-label="Open Menu">
       <BurgerMenuIcon />
