@@ -1,6 +1,8 @@
 import type { LandingPageData } from "@/config/landing.interface";
-import landingData from "@/data/landing.json";
-import landingDatafr from "@/data/landingfr.json";
+import {
+  default as landingData,
+  default as landingDatafr,
+} from "@/data/landingfr.json";
 
 export const getLandingData = async ({
   lang,

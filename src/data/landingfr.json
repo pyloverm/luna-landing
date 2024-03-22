@@ -27,17 +27,16 @@
     "logo": { "label": "Hephaistos Informatica", "href": "/fr" },
     "links": [
       { "label": "À propos", "href": "/fr/Apropos" },
-      { "label": "Services", "href": "#" },
-      { "label": "Tarifs", "href": "#prices" },
-      { "label": "FAQs", "href": "#" },
+      { "label": "Services", "href": "/fr/#prices" },
+      { "label": "Tarifs", "href": "/fr/#prices" },
       { "label": "Nos Projets", "href": "/fr/Projets" }
     ]
   },
   "heroData": {
     "title": " Amelioré votre presance web : Bienvenue sur",
     "subTitle": "Créez un site web qui se démarque et atteignez de nouveaux sommets en ligne avec nous.",
-    "primaryCta": "Voir nos services",
-    "secondaryCta": "Voir nos projets",
+    "primaryCta": { "label": "Voir nos services", "href": "#services" },
+    "secondaryCta": { "label": "Voir nos projets", "href": "/fr/Projets" },
     "highlightedTitle": "Hephaistos Informatica"
   },
   "servicesData": {
@@ -134,6 +133,7 @@
   },
   "pricingData": {
     "title": "Nos Tarifs",
+    "path": "/fr/demande",
     "tiers": [
       {
         "title": "Débutant",
@@ -191,19 +191,30 @@
     ]
   },
   "footerData": {
-    "logo": "Hephaistos Informatica",
-    "description": "Découvrez la Beauté du Cosmos : Explorez les Merveilles Infinies de l'Espace avec Nous",
+    "logo": { "label": "Hephaistos Informatica", "href": "/fr" },
+    "description": "Société de développement web Hephaistos. Nous créons des sites web et des applications web pour les entreprises et les particuliers.",
     "links": [
-      { "label": "À propos", "href": "/" },
-      { "label": "Services", "href": "/" },
-      { "label": "Blog", "href": "/" },
-      { "label": "FAQs", "href": "/" },
-      { "label": "Contact", "href": "/" }
+      { "label": "À propos", "href": "/fr/Apropos" },
+      { "label": "Services", "href": "/fr/#prices" },
+      { "label": "Tarifs", "href": "/fr/#prices" },
+      { "label": "Nos Projets", "href": "/fr/Projets" }
     ],
     "socials": [
-      { "icon": "InstagramIcon", "href": "/" },
-      { "icon": "GithubIcon", "href": "/" },
-      { "icon": "EmailIcon", "href": "/" }
+      {
+        "icon": "InstagramIcon",
+        "href": "https://www.instagram.com/hephaistos.informatica/"
+      },
+      { "icon": "EmailIcon", "href": "mailto:vctferreira.pro@gmail.com" }
     ]
+  },
+  "performances": {
+    "title": "Performances",
+    "subtitle": "Nous nous engageons à fournir des sites web rapides et performants pour offrir une expérience utilisateur exceptionnelle. Découvrez comment nos sites se comparent aux normes de performance web.",
+    "lighthouse": {
+      "performance": "Performances",
+      "accessibility": "Accessibilité",
+      "bestPractices": "Bonnes Pratiques",
+      "seo": "SEO"
+    }
   }
 }

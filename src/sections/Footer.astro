@@ -14,8 +14,13 @@ const { data } = Astro.props;
   class="flex flex-col justify-center text-center gap-y-8 pt-8 bg-black text-white w-full"
 >
   <section>
-    <Action as="a" type="text" class="text-xl md:text-2xl" href="/">
-      {data.logo}
+    <Action
+      as="a"
+      type="text"
+      class="text-xl md:text-2xl"
+      href={data.logo.href}
+    >
+      {data.logo.label}
     </Action>
   </section>
   <section>

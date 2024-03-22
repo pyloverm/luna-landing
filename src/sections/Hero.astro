@@ -1,12 +1,17 @@
 ---
 import Action from "@/components/Action.astro";
 
+interface Link {
+  label: string;
+  href: string;
+}
+
 interface Props {
   data: {
     title: string;
     subTitle: string;
-    primaryCta: string;
-    secondaryCta: string;
+    primaryCta: Link;
+    secondaryCta: Link;
     highlightedTitle?: string;
   };
 }
@@ -28,19 +33,17 @@ const { data } = Astro.props;
         as="a"
         type="button"
         class="bg-black text-white"
-        href="https://github.com/JimmyCamus/luna-landing"
-        target="_blank"
+        href={data.primaryCta.href}
       >
-        {data.primaryCta}
+        {data.primaryCta.label}
       </Action>
       <Action
         as="a"
         class="bg-transparent text-black border border-black"
         type="button"
-        href="https://github.com/JimmyCamus/luna-landing"
-        target="_blank"
+        href={data.secondaryCta.href}
       >
-        {data.secondaryCta}
+        {data.secondaryCta.label}
       </Action>
     </div>
     <div class="flex justify-center">

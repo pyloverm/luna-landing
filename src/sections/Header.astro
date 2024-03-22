@@ -41,7 +41,9 @@ const { data } = Astro.props;
     class="hidden max-lg:flex max-lg:flex-row items-center justify-between container px-8"
   >
     <div class="text-nowrap">
-      <Action as="a" class="text-xl" href="#">{data.logo}</Action>
+      <Action as="a" class="text-xl" href={data.logo.href}
+        >{data.logo.label}</Action
+      >
     </div>
 
     <button id="burgerMenu" class="" aria-label="Open Menu">

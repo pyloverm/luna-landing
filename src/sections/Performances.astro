@@ -1,0 +1,262 @@
+---
+import SectionTitle from "@/components/SectionTitle.astro";
+
+interface Props {
+  data: {
+    title: string;
+    subtitle: string;
+    lighthouse: Lighthouse;
+  };
+}
+
+export interface Lighthouse {
+  performance: string;
+  accessibility: string;
+  bestPractices: string;
+  seo: string;
+}
+
+const { data } = Astro.props;
+---
+
+<div class="my-40">
+  <div class="w-full flex flex-col gap-y-6">
+    <SectionTitle> {data.title} </SectionTitle>
+    <p class="text-lg text-center md:text-start md:text-xl">{data.subtitle}</p>
+  </div>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8"
+    id="perfs"
+  >
+    <div
+      class="p-4 bg-white rounded shadow flex flex-col-reverse justify-center"
+    >
+      <h2 class="text-lg font-semibold text-gray-800 text-center">
+        {data.lighthouse.performance}
+      </h2>
+      <div class="flex justify-center gap-4 items-center">
+        <div class="mt-2">
+          <svg class="w-16 h-16" viewBox="0 0 36 36">
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="#e5e7eb"
+              stroke-width="3"
+              fill="none"></circle>
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="rgb(0, 204, 102)"
+              stroke-width="3"
+              fill="none"
+              id="performance-circle"
+              stroke-dasharray="94.2 94.2"
+              stroke-dashoffset="94.2"></circle>
+          </svg>
+          <p id="performance-score-text" class="relative text-center bottom-11">
+            0
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="p-4 bg-white rounded shadow flex flex-col-reverse justify-center"
+    >
+      <h2 class="text-lg font-semibold text-gray-800 text-center">
+        {data.lighthouse.accessibility}
+      </h2>
+      <div class="flex justify-center gap-4 items-center">
+        <div class="mt-2">
+          <svg class="w-16 h-16" viewBox="0 0 36 36">
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="#e5e7eb"
+              stroke-width="3"
+              fill="none"
+            >
+            </circle>
+
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="rgb(0, 204, 102)"
+              stroke-width="3"
+              fill="none"
+              id="accessibility-circle"
+              stroke-dasharray="94.2 94.2"
+              stroke-dashoffset="94.2"></circle>
+          </svg>
+          <p
+            id="accesibility-score-text"
+            class="relative text-center bottom-11"
+          >
+            0
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="p-4 bg-white rounded shadow flex flex-col-reverse justify-center"
+    >
+      <h2 class="text-lg font-semibold text-gray-800 text-center">
+        {data.lighthouse.bestPractices}
+      </h2>
+      <div class="flex justify-center gap-4 items-center">
+        <div class="mt-2">
+          <svg class="w-16 h-16" viewBox="0 0 36 36">
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="#e5e7eb"
+              stroke-width="3"
+              fill="none"></circle>
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="rgb(0, 204, 102)"
+              stroke-width="3"
+              fill="none"
+              id="best-practices-circle"
+              stroke-dasharray="94.2 94.2"
+              stroke-dashoffset="94.2"></circle>
+          </svg>
+          <p
+            id="best-practices-score-text"
+            class="relative text-center bottom-11"
+          >
+            0
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="p-4 bg-white rounded shadow flex flex-col-reverse justify-center"
+    >
+      <h2 class="text-lg font-semibold text-gray-800 text-center">
+        {data.lighthouse.seo}
+      </h2>
+      <div class="flex justify-center gap-4 items-center">
+        <div class="mt-2">
+          <svg class="w-16 h-16" viewBox="0 0 36 36">
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="#e5e7eb"
+              stroke-width="3"
+              fill="none"></circle>
+            <circle
+              cx="18"
+              cy="18"
+              r="15"
+              stroke="rgb(0, 204, 102)"
+              stroke-width="3"
+              fill="none"
+              id="seo-circle"
+              stroke-dasharray="94.2 94.2"
+              stroke-dashoffset="94.2"></circle>
+          </svg>
+          <p id="seo-score-text" class="relative text-center bottom-11">0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  import gsap from "gsap";
+
+  // Define the animation for each metric score
+
+  const animateScore = (scoreEl: HTMLElement, targetScore: number) => {
+    const radius = 15;
+    const circumference = 2 * Math.PI * radius;
+    const strokeDashoffset =
+      circumference - (targetScore / 100) * circumference;
+    gsap.to(scoreEl, {
+      duration: 1,
+      strokeDashoffset: strokeDashoffset,
+      ease: "circ.out",
+    });
+  };
+
+  const animateScoreText = (scoreEl: HTMLElement, targetScore: number) => {
+    gsap.to(scoreEl, {
+      duration: 1,
+      onUpdate: function () {
+        // update the innerText property of the score element on each frame of the animation
+        let currentValue = Math.floor(this.progress() * targetScore);
+        scoreEl.innerText = currentValue.toString();
+      },
+      ease: "circ.out",
+    });
+  };
+
+  // Animate the metric scores when the component mounts
+
+  const animateScoresWhenVisible = (
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver,
+  ) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const performanceScoreEl = document.querySelector(
+          "#performance-circle",
+        );
+        const accessibilityScoreEl = document.querySelector(
+          "#accessibility-circle",
+        );
+        const bestPracticesScoreEl = document.querySelector(
+          "#best-practices-circle",
+        );
+        const seoScoreEl = document.querySelector("#seo-circle");
+        const accessibilityScoreElText = document.querySelector(
+          "#accesibility-score-text",
+        );
+        const performanceScoreElText = document.querySelector(
+          "#performance-score-text",
+        );
+        const bestPracticesScoreElText = document.querySelector(
+          "#best-practices-score-text",
+        );
+        const seoScoreElText = document.querySelector("#seo-score-text");
+
+        setTimeout(() => {
+          animateScore(performanceScoreEl as HTMLElement, 100);
+          animateScore(accessibilityScoreEl as HTMLElement, 100);
+          animateScore(bestPracticesScoreEl as HTMLElement, 100);
+          animateScore(seoScoreEl as HTMLElement, 100);
+          animateScoreText(accessibilityScoreElText as HTMLElement, 100);
+          animateScoreText(performanceScoreElText as HTMLElement, 100);
+          animateScoreText(bestPracticesScoreElText as HTMLElement, 100);
+          animateScoreText(seoScoreElText as HTMLElement, 100);
+        }, 500);
+
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  // Create an intersection observer
+  const observer = new IntersectionObserver(animateScoresWhenVisible, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  // Observe the component element
+  document.addEventListener("DOMContentLoaded", () => {
+    const componentEl = document.querySelector("#perfs");
+    if (!componentEl) return;
+    observer.observe(componentEl);
+  });
+</script>

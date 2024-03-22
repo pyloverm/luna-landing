@@ -6,10 +6,10 @@ import Brands from "@/sections/Brands.astro";
 import Footer from "@/sections/Footer.astro";
 import Header from "@/sections/Header.astro";
 import Hero from "@/sections/Hero.astro";
+import Performances from "@/sections/Performances.astro";
 import Pricing from "@/sections/Pricing.astro";
 import Services from "@/sections/Services.astro";
 import { getLandingData } from "@/services/data.service";
-
 const lang = getLangFromUrl(Astro.url);
 const data = await getLandingData({ lang });
 ---
@@ -22,8 +22,10 @@ const data = await getLandingData({ lang });
       <Services data={data.servicesData} />
       <Adventajes data={data.adventajesData} />
       <Brands data={data.brandsData} />
+      <Performances data={data.performances} />
       <Pricing data={data.pricingData} />
     </div>
+
     <Footer data={data.footerData} />
   </main>
 </Layout>

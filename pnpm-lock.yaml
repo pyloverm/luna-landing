@@ -23,6 +23,9 @@ dependencies:
   astro-robots-txt:
     specifier: ^1.0.0
     version: 1.0.0
+  gsap:
+    specifier: ^3.12.5
+    version: 3.12.5
   lucide:
     specifier: ^0.359.0
     version: 0.359.0
@@ -2656,6 +2659,10 @@ packages:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
+    dev: false
+
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
     dev: false
 
   /has-bigints@1.0.2:
