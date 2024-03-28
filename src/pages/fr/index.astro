@@ -1,4 +1,5 @@
 ---
+import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { getLangFromUrl } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import Adventajes from "@/sections/Adventajes.astro";
@@ -10,8 +11,15 @@ import Performances from "@/sections/Performances.astro";
 import Pricing from "@/sections/Pricing.astro";
 import Services from "@/sections/Services.astro";
 import { getLandingData } from "@/services/data.service";
+
+import "@/styles/global.css";
 const lang = getLangFromUrl(Astro.url);
 const data = await getLandingData({ lang });
+
+let windowSize;
+if (typeof window !== "undefined") {
+  windowSize = window.innerWidth;
+}
 ---
 
 <Layout meta={data.meta}>
@@ -25,6 +33,12 @@ const data = await getLandingData({ lang });
       <Performances data={data.performances} />
       <Pricing data={data.pricingData} />
     </div>
+
+    <MacbookScroll
+      src="/img.png"
+      title="Nos dernières réalisations"
+      client:load
+    />
 
     <Footer data={data.footerData} />
   </main>

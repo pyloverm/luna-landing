@@ -9,7 +9,7 @@ import Hero from "@/sections/Hero.astro";
 import Pricing from "@/sections/Pricing.astro";
 import Services from "@/sections/Services.astro";
 import { getLandingData } from "@/services/data.service";
-
+import "@/styles/global.css";
 const lang = getLangFromUrl(Astro.url);
 const data = await getLandingData({ lang });
 ---
