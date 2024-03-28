@@ -1,5 +1,4 @@
 ---
-import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { getLangFromUrl } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import Adventajes from "@/sections/Adventajes.astro";
@@ -31,12 +30,6 @@ const data = await getLandingData({ lang });
       <Performances data={data.performances} />
       <Pricing data={data.pricingData} />
     </div>
-
-    <MacbookScroll
-      src="/img.png"
-      title="Nos dernières réalisations"
-      client:load
-    />
 
     <Footer data={data.footerData} />
   </main>

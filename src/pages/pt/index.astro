@@ -1,4 +1,5 @@
 ---
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import { getLangFromUrl } from "@/i18n/utils";
 import Layout from "@/layouts/Layout.astro";
 import Adventajes from "@/sections/Adventajes.astro";
@@ -18,8 +19,10 @@ const data = await getLandingData({ lang });
 <Layout meta={data.meta}>
   <Header data={data.headerData} />
   <main class="flex flex-col justify-center items-center">
-    <div class="container w-full mr-auto ml-auto pr-8 pl-8">
+    <AuroraBackground client:load>
       <Hero data={data.heroData} />
+    </AuroraBackground>
+    <div class="container w-full mr-auto ml-auto pr-8 pl-8 mt-8">
       <Services data={data.servicesData} />
       <Adventajes data={data.adventajesData} />
       <Brands data={data.brandsData} />
