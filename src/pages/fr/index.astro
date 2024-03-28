@@ -12,21 +12,19 @@ import Pricing from "@/sections/Pricing.astro";
 import Services from "@/sections/Services.astro";
 import { getLandingData } from "@/services/data.service";
 
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import "@/styles/global.css";
 const lang = getLangFromUrl(Astro.url);
 const data = await getLandingData({ lang });
-
-let windowSize;
-if (typeof window !== "undefined") {
-  windowSize = window.innerWidth;
-}
 ---
 
 <Layout meta={data.meta}>
   <Header data={data.headerData} />
   <main class="flex flex-col justify-center items-center">
-    <div class="container w-full mr-auto ml-auto pr-8 pl-8">
+    <AuroraBackground client:load>
       <Hero data={data.heroData} />
+    </AuroraBackground>
+    <div class="container w-full mr-auto ml-auto pr-8 pl-8 mt-8">
       <Services data={data.servicesData} />
       <Adventajes data={data.adventajesData} />
       <Brands data={data.brandsData} />
