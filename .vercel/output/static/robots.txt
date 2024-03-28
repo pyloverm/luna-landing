@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://luna-landing-rust.vercel.app/sitemap-index.xml
