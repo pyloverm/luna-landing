@@ -3,9 +3,7 @@
   "compilerOptions": {
     "baseUrl": "C:/Users/thonon/OneDrive/Bureau/ds/hep/hepaistos-landing",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
