@@ -1,0 +1,50 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/sections/Footer.astro";
+import Header from "@/sections/Header.astro";
+
+import SideBySideProject from "@/components/SideBySideProject.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+import { getLandingData } from "@/services/data.service";
+
+const lang = getLangFromUrl(Astro.url);
+const data = await getLandingData({ lang });
+
+const projets = await Astro.glob("../../content/projets/*.md");
+---
+
+<Layout meta={data.meta}>
+  <Header data={data.headerData} />
+  <main class="flex flex-col justify-center items-center">
+    <div class="container w-full mr-auto ml-auto pr-8 pl-8">
+      <section id="hero-section" class="flex justify-center mt-48">
+        <div class="">
+          <h1 class="text-4xl text-center font-semibold md:text-6xl">
+            Nos
+            <span class="text-primary">Projets </span>
+          </h1>
+
+          <ul class="my-20">
+            {
+              projets.map((projet, index) => (
+                <SideBySideProject
+                  data={projet}
+                  reversed={index % 2 == 0}
+                  lang="en"
+                />
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+    </div>
+    <Footer data={data.footerData} />
+  </main>
+</Layout>
+
+<style>
+  .a {
+    color: #000;
+    underline: #000 2px;
+  }
+</style>
