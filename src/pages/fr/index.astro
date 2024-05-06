@@ -12,6 +12,7 @@ import Services from "@/sections/Services.astro";
 import { getLandingData } from "@/services/data.service";
 
 import { AuroraBackground } from "@/components/ui/aurora-background";
+
 import "@/styles/global.css";
 const lang = getLangFromUrl(Astro.url);
 const data = await getLandingData({ lang });
@@ -23,6 +24,7 @@ const data = await getLandingData({ lang });
     <AuroraBackground client:load>
       <Hero data={data.heroData} />
     </AuroraBackground>
+
     <div class="container w-full mr-auto ml-auto pr-8 pl-8 mt-8">
       <Services data={data.servicesData} />
       <Adventajes data={data.adventajesData} />

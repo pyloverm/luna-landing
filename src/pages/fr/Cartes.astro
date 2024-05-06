@@ -1,0 +1,64 @@
+---
+import { ThreeDCardDemo } from "@/components/ui/cards";
+
+import { getLangFromUrl } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/sections/Footer.astro";
+import Header from "@/sections/Header.astro";
+import { getLandingData } from "@/services/data.service";
+import "@/styles/global.css";
+const lang = getLangFromUrl(Astro.url);
+const data = await getLandingData({ lang });
+---
+
+<Layout meta={data.meta}>
+  <Header data={data.headerData} />
+  <main class="flex flex-col justify-center items-center">
+    <div class="container w-full mr-auto ml-auto pr-8 pl-8">
+      <section id="hero-section" class="flex justify-center mt-48 w-full">
+        <div class="">
+          <h1 class="text-4xl text-center font-semibold md:text-6xl">
+            Cartes de Visite
+            <span class="text-primary">Professionnelles et Design </span>
+          </h1>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <ThreeDCardDemo
+              titre="Cartes de Visite Professionnelles pour une Nail Artist"
+              description=" Élevez votre image de marque avec nos cartes de visite professionnelles et design."
+              image="/anaf.png"
+              cta="Commander"
+              prix="A partir de 15€*"
+              client:load
+            />
+            <ThreeDCardDemo
+              titre="Cartes de Visite Professionnelles pour un restaurant / bar"
+              description=" Élevez votre image de marque avec nos cartes de visite professionnelles et design."
+              image="/redondo.png"
+              cta="Commander"
+              prix="A partir de 15€*"
+              client:load
+            />
+            <ThreeDCardDemo
+              titre="Cartes de Visite Professionnelles pour un maçon / ferraileur"
+              description=" Élevez votre image de marque avec nos cartes de visite professionnelles et design."
+              image="/roger.png"
+              cta="Commander"
+              prix="A partir de 15€*"
+              client:load
+            />
+            <ThreeDCardDemo
+              titre="Cartes de Visite Professionnelles pour une coiffeuse / salon de coiffure"
+              description=" Élevez votre image de marque avec nos cartes de visite professionnelles et design."
+              image="/filipa.png"
+              cta="Commander"
+              prix="A partir de 15€*"
+              client:load
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <Footer data={data.footerData} />
+  </main>
+</Layout>
